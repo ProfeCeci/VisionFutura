@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <!-- campo de texto los laber coon for=descriptivo -->
+      <label for="nombre">Nombre:</label>
+      <!---Caja en blanco name=que va a conetener esa caja - size=cantidad largo de la caja- - maxlength maximo de caracteres - required: Requerir que se complete ese campo -->
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        size="30"
+        maxlength="50"
+        required
+      />
+
+      <br />
+
+      <!-- Email Input -->
+      <label for="correo">Correo Electrónico:</label>
+      <!--  Tengo size espacio de la caja en blanca -  Maxlenth 50 caracteres requiere que completes el campo de mail -->
+      <input
+        type="email"
+        id="correo"
+        name="correo"
+        size="30"
+        maxlength="50"
+        value="Correo electronico"
+        required
+      />
+      <br />
+      <br />
+      <!-- Range Input -->
+      <label for="nivel">Nivel de Experiencia (1-10):</label>
+      <input
+        type="range"
+        id="nivel"
+        name="nivel"
+        min="1"
+        max="10"
+        value="5"
+        required
+      />
+      <br />
+
+      <!-- Comments Textarea -->
+      <label for="comentarios">Comentarios:</label>
+      <textarea
+        id="comentarios"
+        name="comentarios"
+        rows="4"
+        placeholder="Escribe tus comentarios aquí..."
+      ></textarea>
+      <br />
+      <!-- Submit Button  Enviar la info del formulario -->
+
+      <button type="submit">Enviar</button>
+
+      <!-- Reset Button  limpiar el formulario-->
+      <button type="reset">Limpiar</button>
+    </form>
+    <div class="contenedor-mapa">
+      <div class="titulo-ubicacion">
+        <h2>Ubicación</h2>
+        <br /><br />
+        <p>
+          Avenida ... <br />
+          Santiago del Estero, Argentina <br />
+        </p>
+      </div>
+      <iframe
+        src=""
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </body>
+</html>
