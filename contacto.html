@@ -1,61 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="images/favicon_io/favicon-16x16.png">
   </head>
   <body>
-    <form action="#" method="post">
-      <!-- campo de texto los laber coon for=descriptivo -->
-      <label for="nombre">Nombre:</label>
-      <!---Caja en blanco name=que va a conetener esa caja - size=cantidad largo de la caja- - maxlength maximo de caracteres - required: Requerir que se complete ese campo -->
-      <input
-        type="text"
-        id="nombre"
-        name="nombre"
-        size="30"
-        maxlength="50"
-        required
-      />
+    <header>
+      <a href="index.html">
+        <img src="images/Vision.png" alt="Logo vision" class="logo"/>
+      </a>
+      <a href="programas.html" class="texto-navbar">Programas</a>
+      <a href="noticias.html" class="texto-navbar">Noticias</a>
+      <a href="Sobre Nosotros.html" class="texto-navbar">Sobre Nosotros</a>
+      <a href="Contacto.html" class="texto-navbar">Contacto</a>
+    </header>
+    <h2>Formulario de Contacto</h2>
+    <br>
+    <form action="/submit" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-      <br />
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
 
-      <!-- Email Input -->
-      <label for="correo">Correo Electrónico:</label>
-      <!--  Tengo size espacio de la caja en blanca -  Maxlenth 50 caracteres requiere que completes el campo de mail -->
-      <input
-        type="email"
-        id="correo"
-        name="correo"
-        size="30"
-        maxlength="50"
-        value="Correo electronico"
-        required
-      />
-      <br />
-      <br />
-      <!-- Range Input -->
-      <label for="nivel">Nivel de Experiencia (1-10):</label>
-      <input
-        type="range"
-        id="nivel"
-        name="nivel"
-        min="1"
-        max="10"
-        value="5"
-        required
-      />
-      <br />
 
-      <!-- Comments Textarea -->
-      <label for="comentarios">Comentarios:</label>
-      <textarea
-        id="comentarios"
-        name="comentarios"
-        rows="4"
-        placeholder="Escribe tus comentarios aquí..."
-      ></textarea>
+        <label for="nivel">Nivel de Experiencia (1-10):</label>
+        <input type="range" id="nivel" name="nivel" min="1" max="10" value="5" required>
+        <br><br>
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
       <br />
       <!-- Submit Button  Enviar la info del formulario -->
 
@@ -64,6 +41,7 @@
       <!-- Reset Button  limpiar el formulario-->
       <button type="reset">Limpiar</button>
     </form>
+    <br>
     <div class="contenedor-mapa">
       <div class="titulo-ubicacion">
         <h2>Ubicación</h2>
@@ -83,5 +61,6 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
+    <footer>Visión Futura</footer>
   </body>
 </html>
