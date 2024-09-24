@@ -14,7 +14,7 @@
       </a>
       <a href="programas.html" class="texto-navbar">Programas</a>
       <a href="noticias.html" class="texto-navbar">Noticias</a>
-      <a href="Sobre Nosotros.html" class="texto-navbar">Sobre Nosotros</a>
+      <a href="sobre-nosotros.html" class="texto-navbar">Sobre Nosotros</a>
       <a href="Contacto.html" class="texto-navbar">Contacto</a>
     </header>
     <h2>Formulario de Contacto</h2>
@@ -26,11 +26,15 @@
         <label for="correo">Correo Electrónico:</label>
         <input type="email" id="correo" name="correo" required><br><br>
 
-
-        <label for="nivel">Nivel de Experiencia (1-10):</label>
-        <input type="range" id="nivel" name="nivel" min="1" max="10" value="5" required>
-        <br><br>
-
+        <label for="Experiencia">Califique su nivel de experiencia:</label>
+        <select name="experiencia" id="Experiencia">
+          <option value="muy malo">Muy malo</option>
+          <option value="malo">Malo</option>
+          <option value="bueno">Bueno</option>
+          <option value="muy bueno">Muy bueno</option>
+          <option value="excelente">Excelente</option>
+        </select>
+          <br><br>
         <label for="comentario">Comentario:</label><br>
         <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
       <br />
@@ -41,26 +45,6 @@
       <!-- Reset Button  limpiar el formulario-->
       <button type="reset">Limpiar</button>
     </form>
-    <br>
-    <div class="contenedor-mapa">
-      <div class="titulo-ubicacion">
-        <h2>Ubicación</h2>
-        <br /><br />
-        <p>
-          Avenida ... <br />
-          Santiago del Estero, Argentina <br />
-        </p>
-      </div>
-      <iframe
-        src=""
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
     <footer>Visión Futura</footer>
   </body>
 </html>
