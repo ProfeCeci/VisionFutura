@@ -4,97 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-    <link rel="icon" href="images/favicon_io/favicon-16x16.png">
+    <link rel="icon" href="images/favicon_io/favicon-16x16.png" />
     <style>
-      *{
+      * {
         margin: 0;
+        color: #6ad99a;
+        font-family: "Montserrat", sans-serif;
       }
-      header{
-        background-color:#0D0D0D;
+      header {
+        background-color: #0d0d0d;
         text-align: center;
       }
-      body{
-        background-color:#0D0D0D;
+      body {
+        background-color: #0d0d0d;
       }
-      .texto-navbar{
-        color: #6AD99A;
-        font-family: 'Montserrat', sans-serif;
-      }
-      .logo{
+      .logo {
         text-align: left;
-        width: 50px
-      }
-      h2 {
-        color: #6AD99A; /* Mismo color de letra que los enlaces de la navbar */
-        font-family: 'Montserrat', sans-serif; /* Mismo formato de letra */
-      }
-      form {
-        color: #6AD99A; /* Mismo color de letra que los enlaces de la navbar */
-        font-family: 'Montserrat', sans-serif; /* Mismo formato de letra */
+        width: 50px;
       }
       select {
         background-color: black;
-        color: #6AD99A;
+        color: #6ad99a;
       }
       select:focus {
         background-color: black;
-        color: #6AD99A; /* Asegura que el texto siga siendo visible */
+        color: #6ad99a; /* Asegura que el texto siga siendo visible */
       }
-      option {
-        color: #6AD99A;
+      label{
+        color: #42b072;
+        text-align: center;
       }
-      footer{
-        color: #6AD99A;
-        font-family: 'Montserrat', sans-serif;
+      button{
+        color: black;
       }
-  </style>
+    </style>
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img src="images/Vision.png" alt="Logo vision" class="logo"/>
-      </a>
+      <a href="index.html"
+        ><img src="images/Vision.png" alt="Logo vision" class="logo"
+      /></a>
       <a href="programas.html" class="texto-navbar">Programas</a>
       <a href="noticias.html" class="texto-navbar">Noticias</a>
       <a href="sobre-nosotros.html" class="texto-navbar">Sobre Nosotros</a>
       <a href="contacto.html" class="texto-navbar">Contacto</a>
     </header>
-    <br>
+    <br />
     <center>
-    <h2>Formulario de Contacto</h2>
-    <br>
-    <form action="/submit" method="post">
+      <h2><u>Formulario de contacto</u></h2>
+      <br />
+      <form action="/submit" method="post">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
 
         <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo" required><br><br>
+        <input type="email" id="correo" name="correo" required /><br /><br />
 
         <label for="Experiencia">Califique su nivel de experiencia:</label>
         <select name="experiencia" id="Experiencia">
-          <option value="muy malo">Muy malo</option>
-          <option value="malo">Malo</option>
-          <option value="bueno">Bueno</option>
+          <option value="excelente">Excelente</option>                    
           <option value="muy bueno">Muy bueno</option>
-          <option value="excelente">Excelente</option>
+          <option value="bueno">Bueno</option>
+          <option value="malo">Malo</option>
+          <option value="muy malo">Muy malo</option>
         </select>
-          <br><br>
-        <label for="comentario">Comentario:</label><br>
-        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
-      <br />
-      <!-- Submit Button  Enviar la info del formulario -->
+        <br /><br />
+        <label for="comentario">Comentario:</label><br />
+        <textarea
+          id="comentario"
+          name="comentario"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+        <br />
+        <!-- Submit Button  Enviar la info del formulario -->
 
-      <button type="submit">Enviar</button>
+        <button type="submit">Enviar</button>
 
-      <!-- Reset Button  limpiar el formulario-->
-      <button type="reset">Limpiar</button>
-    </form>
-    <br><br>
+        <!-- Reset Button  limpiar el formulario-->
+        <button type="reset">Limpiar</button>
+      </form>
+      <br /><br />
+    </center>
+    <footer>
+      <center>
+        <p style="color: #737373">
+          &copy; 2024 Visión Futura. Todos los derechos reservados.
+        </p>
       </center>
-      <footer>
-        <center>
-          <p>&copy; 2024 Visión Futura. Todos los derechos reservados.</p>
-        </center>
-      </footer>
+    </footer>
   </body>
 </html>

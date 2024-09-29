@@ -8,6 +8,9 @@
     <style>
       *{
         margin: 0;
+        color: #6AD99A;
+        font-family: 'Montserrat', sans-serif;
+
       }
       header{
           background-color:#0D0D0D;
@@ -16,21 +19,9 @@
       body{
         background-color:#0D0D0D;
       }
-      .texto-navbar{
-        color: #6AD99A;
-        font-family: 'Montserrat', sans-serif;
-      }
       .logo{
         text-align: left;
         width: 50px
-      }
-      footer, h2, li{
-        color: #6AD99A;
-        font-family: 'Montserrat', sans-serif;
-      }
-      table, th, td{
-        color: #6AD99A;
-        font-family: 'Montserrat', sans-serif;
       }
       th{
         text-align: left;
@@ -38,22 +29,25 @@
       .porcentaje{
         text-align: center;
       }
-      ol, ul{
-        text-align: center;
+      ol, ul, li{
+        color: #42b072;
         list-style-position: inside;
+      }
+      td{
+        color: #42b072;
       }
   </style>
   </head>
   <body>
     <header>
-        <a href="index.html">
-          <img src="images/Vision.png" alt="Logo vision" class="logo"/>
-        </a>
-        <a href="programas.html" class="texto-navbar">Programas</a>
-        <a href="noticias.html" class="texto-navbar">Noticias</a>
-        <a href="sobre-nosotros.html" class="texto-navbar">Sobre Nosotros</a>
-        <a href="contacto.html" class="texto-navbar">Contacto</a>
-      </header>
+      <a href="index.html"
+          ><img src="images/Vision.png" alt="Logo vision" class="logo"
+        /></a>
+      <a href="programas.html">Programas</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </header>
       <br><br>
       <center>
       <h2>Programas destacados</h2>
@@ -73,25 +67,25 @@
       </ul>
       <br><br>
       <table>
-        <caption><strong>Rating de los programas</strong></caption>
+        <caption><strong>Calificacion de los programas</strong></caption>
         <thead>
             <tr>
                 <th>Programa</th>
-                <th>Número de visitas</th>
+                <th>Calificación</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Operación Retuit</td>
-                <td class="porcentaje">30</td>
+                <td class="porcentaje">3.5/5</td>
             </tr>
             <tr>
                 <td>Modo Incógnito</td>
-                <td class="porcentaje">40</td>
+                <td class="porcentaje">4/5</td>
             </tr>
             <tr>
                 <td>Georgia: La Cordillera Sumergida</td>
-                <td class="porcentaje">25</td>
+                <td class="porcentaje">4.5/5</td>
             </tr>
         </tbody>
     </table>
@@ -99,7 +93,7 @@
   <br><br>
   <footer>
     <center>
-      <p>&copy; 2024 Visión Futura. Todos los derechos reservados.</p>
+      <p style="color: #737373;">&copy; 2024 Visión Futura. Todos los derechos reservados.</p>
     </center>
   </footer>
   </body>
