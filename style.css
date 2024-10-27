@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    color: #AEDFF2;
+    font-family: "Montserrat", sans-serif;
+}
+header {
+    background-color: #020F59;
+    text-align: center;
+}
+body {
+    background-color: #020F59;
+}
+.logo {
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+th{
+    text-align: left;
+}
+.porcentaje{
+    text-align: center;
+}
+ol, ul, li{
+    color: #AEDFF2;
+    list-style-position: inside;
+}
+td{
+    color: #AEDFF2;
+}
+.texto {
+    color: #AEDFF2;
+    text-align: justify;
+    line-height: 1.6;
+}
+.parrafo {
+    color: #AEDFF2;
+    text-align: center;
+    margin: 1em 0;
+}
+select {
+    background-color: #020F59;
+    color: #AEDFF2;
+}
+select:focus {
+    background-color: #020F59;
+    color: #AEDFF2; /* Asegura que el texto siga siendo visible */
+}
+label{
+    color: #AEDFF2;
+    text-align: center;
+}
+button{
+    color: #020F59;
+}
+.footer{
+    color: #AEDFF2;
+}
+h1{
+    color:#AEDFF2;
+}
+#Alerta{
+    font-size: 200%;
+}
+header > a {
+    text-decoration: none;
+    margin: 0 1em;
+}
+table td {
+    padding: 0.5em;
+}
+h2 + p {
+    margin-top: 1em;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+}
+a:hover {
+    text-decoration: underline;
+}
+button:hover {
+    cursor: pointer;
+}
+.noticia3{
+    width: 70vw;
+    height: 70vh;
+}
