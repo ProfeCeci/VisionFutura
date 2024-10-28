@@ -6,6 +6,10 @@
 header {
     background-color: #020F59;
     text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
 body {
     background-color: #020F59;
@@ -54,9 +58,14 @@ label{
 }
 button{
     color: #020F59;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el color de fondo y transformaciones */
 }
 .footer{
     color: #AEDFF2;
+    padding: 10px 0;
+    position: fixed; /* Fijo en la parte inferior */
+    bottom: 0;
+    width: 100%;
 }
 h1{
     color:#AEDFF2;
@@ -67,6 +76,14 @@ h1{
 header > a {
     text-decoration: none;
     margin: 0 1em;
+}
+header a {
+    color: #AEDFF2;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición para el color y la sombra del texto */
+}
+header a:hover {
+    color: #FFD700; /* Cambia el color del texto al pasar el cursor */
+    text-shadow: 0 0 5px #FFD700; /* Agrega sombra al texto al pasar el cursor */
 }
 table td {
     padding: 0.5em;
@@ -86,8 +103,67 @@ a:hover {
 }
 button:hover {
     cursor: pointer;
+    background-color: #AEDFF2; /* Cambia el color de fondo al pasar el cursor */
+    transform: translateY(-5px); /* Eleva el botón al pasar el cursor */
 }
 .noticia3{
     width: 70vw;
     height: 70vh;
+}
+.content {
+    padding: 20px;
+    margin: 20px;
+}
+h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #AEDFF2; /* Línea debajo del título */
+    padding-bottom: 5px; /* Espaciado inferior */
+}
+
+.styled-list {
+    background-color: #1E1E1E; /* Fondo de la lista */
+    border: 2px solid #AEDFF2; /* Borde de la lista */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.styled-table caption {
+    margin-bottom: 10px; /* Espaciado inferior del caption */
+}
+
+.styled-table th, .styled-table td {
+    border: 2px solid #AEDFF2; /* Borde de las celdas */
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.styled-table th {
+    background-color: #1E1E1E; /* Fondo de los encabezados */
+}
+.contenedor-mapa {
+    margin: 20px 0;
+    position: relative; /* Para que el iframe pueda ser posicionado en relación a este contenedor */
+}
+#calificacion-table {
+    position: absolute; /* Posicionamiento absoluto */       /* Distancia desde la derecha */
+    width: auto;       /* Ajusta el ancho como sea necesario */
+    z-index: 100;      /* Asegura que la tabla esté por encima de otros elementos */
+}
+.styled-table tr:nth-child(even) {
+    background-color: #1E1E1E; /* Fondo oscuro para filas pares */
+}
+
+.styled-table tr:nth-child(odd) {
+    background-color: #2A2A2A; /* Fondo ligeramente más claro para filas impares */
+}
+.styled-table caption::before {
+    content: "📊 "; /* Agrega un icono de gráfico antes del título */
+    font-size: 1.5em; /* Tamaño del icono */
 }
