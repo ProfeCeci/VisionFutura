@@ -1,10 +1,10 @@
 * {
     margin: 0;
-    color: #AEDFF2;
+    color: #6989b5;
     font-family: "Montserrat", sans-serif;
 }
 header {
-    background-color: #020F59;
+    background-color: #0a0d2b;
     text-align: center;
     position: sticky;
     top: 0;
@@ -12,7 +12,7 @@ header {
     transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
 body {
-    background-color: #020F59;
+    background-color: #04050f;
 }
 .logo {
     text-align: left;
