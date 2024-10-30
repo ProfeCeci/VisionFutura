@@ -17,8 +17,9 @@ body {
 .logo {
     text-align: left;
     transition: transform 0.3s ease;
-    width: 150px;
+    width: 130px;
 }
+
 .logo:hover {
     transform: scale(1.1);
 }
@@ -86,6 +87,10 @@ header a:hover {
     color: #FFD700; /* Cambia el color del texto al pasar el cursor */
     text-shadow: 0 0 5px #FFD700; /* Agrega sombra al texto al pasar el cursor */
 }
+i{
+    margin-right: 5px;
+}
+
 table td {
     padding: 0.5em;
 }
