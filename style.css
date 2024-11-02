@@ -116,14 +116,28 @@ button:hover {
     width: 70vw;
     height: 70vh;
 }
+
 .content {
     padding: 20px;
     margin: 20px;
 }
 h2 {
     margin-bottom: 10px;
-    border-bottom: 2px solid #AEDFF2; /* Línea debajo del título */
     padding-bottom: 5px; /* Espaciado inferior */
+}
+.Subtitulo{
+    border-bottom: 2px solid #AEDFF2;
+}
+
+.flex-container {
+    display: flex;   /* Esta propiedad define al div como contenedor flex*/
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+.flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
+    color: #6989b5;
+    background-color: #04050f;
 }
 
 .styled-list {
@@ -131,9 +145,10 @@ h2 {
     border: 2px solid #AEDFF2; /* Borde de la lista */
     border-radius: 10px; /* Bordes redondeados */
     padding: 10px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espaciado inferior */
+    margin: 0; /* Eliminar margen para que el espacio sea uniforme */
+    min-width: 200px; /* Ancho mínimo para cada lista */
+    max-width: 300px; /* Ancho máximo para evitar que se expandan demasiado */
 }
-
 .styled-table {
     width: 100%;
     border-collapse: collapse; /* Colapsar bordes */
@@ -161,6 +176,8 @@ h2 {
     position: absolute; /* Posicionamiento absoluto */       /* Distancia desde la derecha */
     width: auto;       /* Ajusta el ancho como sea necesario */
     z-index: 100;      /* Asegura que la tabla esté por encima de otros elementos */
+    padding: 20px;
+    margin: 20px;
 }
 .styled-table tr:nth-child(even) {
     background-color: #1E1E1E; /* Fondo oscuro para filas pares */
