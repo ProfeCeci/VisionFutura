@@ -1,7 +1,19 @@
+/* ====== SELECTORES UNIVERSALES ====== */
 * {
     margin: 0;
     color: #6989b5;
     font-family: "Montserrat", sans-serif;
+}
+
+/* ====== SELECTORES DE TIPO (ELEMENTOS HTML) ====== */
+body {
+    background-color: #04050f;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
 }
 header {
     background-color: #0a0d2b;
@@ -14,31 +26,56 @@ header {
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
     justify-content: center; /* Centra los elementos horizontalmente */
     gap: 10px; /* Espacio entre los elementos */
+    grid-area: header;
 }
-body {
+main {
+    grid-area: main;
+}
+footer {
     background-color: #04050f;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    grid-area: footer;
 }
+th{
+    text-align: left;
+}
+td{
+    color: #AEDFF2;
+}
+select {
+    background-color: #020F59;
+    color: #AEDFF2;
+}
+label{
+    color: #AEDFF2;
+    text-align: center;
+}
+button{
+    color: #020F59;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el color de fondo y transformaciones */
+}
+h1{
+    color:#AEDFF2;
+}
+h2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px; /* Espaciado inferior */
+}
+i{
+    margin-right: 5px;
+}
+
+/* ====== SELECTORES DE CLASE ====== */
 .logo {
     text-align: left;
     transition: transform 0.3s ease;
     width: 130px;
 }
-
-.logo:hover {
-    transform: scale(1.1);
-}
-th{
-    text-align: left;
-}
 .porcentaje{
     text-align: center;
-}
-ol, ul, li{
-    color: #AEDFF2;
-    list-style-position: inside;
-}
-td{
-    color: #AEDFF2;
 }
 .texto {
     color: #AEDFF2;
@@ -49,46 +86,46 @@ td{
 .content-wrapper {
     margin-bottom: 60px; /* Ajusta este valor según la altura de tu footer */
 }
-.parrafo {
-    color: #AEDFF2;
-    text-align: center;
-    margin: 1em 0;
-}
-select {
-    background-color: #020F59;
-    color: #AEDFF2;
-}
-select:focus {
-    background-color: #020F59;
-    color: #AEDFF2; /* Asegura que el texto siga siendo visible */
-}
-label{
-    color: #AEDFF2;
-    text-align: center;
-}
-button{
-    color: #020F59;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el color de fondo y transformaciones */
-}
-footer {
-    background-color: #04050f;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
 
+ol, ul, li{
+    color: #AEDFF2;
+    list-style-position: inside;
+}
 .footer {
     color: #AEDFF2;
     padding: 10px 0;
     margin: 0;
 }
-h1{
-    color:#AEDFF2;
+
+
+.parrafo {
+    color: #AEDFF2;
+    text-align: center;
+    margin: 1em 0;
 }
+.noticia3{
+    width: 70vw;
+    height: 70vh;
+}
+
+.Subtitulo{
+    border-bottom: 2px solid #AEDFF2;
+    text-align: center;
+}
+
+/* ====== SELECTORES DE ID ====== */
 #Alerta{
     font-size: 200%;
 }
+#calificacion-table {
+    position: absolute; /* Posicionamiento absoluto */       /* Distancia desde la derecha */
+    width: auto;       /* Ajusta el ancho como sea necesario */
+    z-index: 100;      /* Asegura que la tabla esté por encima de otros elementos */
+    padding: 20px;
+    margin-top: 170px; /* Espaciado superior */
+}
+
+/* ====== SELECTORES AVANZADOS ====== */
 header > a {
     text-decoration: none;
     margin: 0 1em;
@@ -99,54 +136,75 @@ header a {
     margin: 5px; /* Espacio entre los enlaces */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
-header a:hover {
-    color: #FFD700; /* Cambia el color del texto al pasar el cursor */
-    text-shadow: 0 0 5px #FFD700; /* Agrega sombra al texto al pasar el cursor */
-}
-i{
-    margin-right: 5px;
-}
-
-table td {
-    padding: 0.5em;
+.flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
+    color: #6989b5;
+    background-color: #04050f;
 }
 h2 + p {
     margin-top: 1em;
 }
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 0.5em;
-    width: 100%;
-    max-width: 300px;
+
+
+/* ====== PSEUDOCLASES ====== */
+.logo:hover {
+    transform: scale(1.1);
 }
-a:hover {
-    text-decoration: underline;
+select:focus {
+    background-color: #020F59;
+    color: #AEDFF2; /* Asegura que el texto siga siendo visible */
 }
 button:hover {
     cursor: pointer;
     background-color: #AEDFF2; /* Cambia el color de fondo al pasar el cursor */
     transform: translateY(-5px); /* Eleva el botón al pasar el cursor */
 }
-.noticia3{
-    width: 70vw;
-    height: 70vh;
+header a:hover {
+    color: #FFD700; /* Cambia el color del texto al pasar el cursor */
+    text-shadow: 0 0 5px #FFD700; /* Agrega sombra al texto al pasar el cursor */
 }
 
-.content {
-    display: flex; /* Cambia a flex para que los hijos se distribuyan en fila */
-    flex-direction: row; /* Asegura que los elementos estén en fila */
-    column-gap: 40px; /* Añade un espacio horizontal de 40px entre los elementos */
-}
-h2 {
-    margin-bottom: 10px;
-    padding-bottom: 5px; /* Espaciado inferior */
-}
-.Subtitulo{
-    border-bottom: 2px solid #AEDFF2;
-    text-align: center;
+/* ====== PSEUDOELEMENTOS ====== */
+.styled-table caption::before {
+    content: "📊 "; /* Agrega un icono de gráfico antes del título */
+    font-size: 1.5em; /* Tamaño del icono */
 }
 
+/* ====== MEDIA QUERIES ====== */
+/* Para tablets (>992px) */
+@media (min-width: 992px) {
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Ejemplo: contenido principal y barra lateral */
+        gap: 20px;
+    }
+    
+    header {
+        padding: 15px 30px;
+    }
+    
+    /* Ajusta otros estilos según sea necesario */
+}
+
+/* Para pantallas 4K (>1200px) */
+@media (min-width: 1200px) {
+    body {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .content {
+        grid-template-columns: 3fr 1fr; /* Ajusta la proporción para pantallas más grandes */
+    }
+    
+    /* Aumenta el tamaño de fuente para mejor legibilidad en pantallas grandes */
+    html {
+        font-size: 18px;
+    }
+    
+    /* Ajusta otros estilos según sea necesario */
+}
+
+/* ====== CONTENEDORES FLEXBOX Y GRID ====== */
 .flex-container {
     display: flex;
     justify-content: center; /* Centra los elementos horizontalmente */
@@ -154,18 +212,13 @@ h2 {
     flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
     margin-bottom: 20px; /* Espaciado inferior */
 }
-.flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
-    color: #6989b5;
-    background-color: #04050f;
+.content {
+    display: flex; /* Cambia a flex para que los hijos se distribuyan en fila */
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    column-gap: 40px; /* Añade un espacio horizontal de 40px entre los elementos */
 }
 
-.table-container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-}
-
+/* ====== UTILIDADES Y COMPONENTES ====== */
 .styled-list {
     background-color: #1E1E1E; /* Fondo de la lista */
     border: 2px solid #AEDFF2; /* Borde de la lista */
@@ -177,6 +230,34 @@ h2 {
 }
 .styled-table {
     border-collapse: collapse; /* Colapsar bordes */
+}
+
+table td {
+    padding: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+.flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
+    color: #6989b5;
+    background-color: #04050f;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
 .styled-table caption {
@@ -197,13 +278,7 @@ h2 {
     margin: 20px 0;
     position: relative; /* Para que el iframe pueda ser posicionado en relación a este contenedor */
 }
-#calificacion-table {
-    position: absolute; /* Posicionamiento absoluto */       /* Distancia desde la derecha */
-    width: auto;       /* Ajusta el ancho como sea necesario */
-    z-index: 100;      /* Asegura que la tabla esté por encima de otros elementos */
-    padding: 20px;
-    margin-top: 170px; /* Espaciado superior */
-}
+
 .styled-table tr:nth-child(even) {
     background-color: #1E1E1E; /* Fondo oscuro para filas pares */
 }
@@ -211,10 +286,7 @@ h2 {
 .styled-table tr:nth-child(odd) {
     background-color: #2A2A2A; /* Fondo ligeramente más claro para filas impares */
 }
-.styled-table caption::before {
-    content: "📊 "; /* Agrega un icono de gráfico antes del título */
-    font-size: 1.5em; /* Tamaño del icono */
-}
+
 @media (max-width: 600px) {
     header {
         align-items: center; /* Centra los elementos horizontalmente */
@@ -244,4 +316,6 @@ h2 {
         height: 300px; /* Ajusta la altura del iframe según sea necesario */
         margin: 0 10px; /* Agrega un margen horizontal de 10px a los lados */
     }
+    
 }
+

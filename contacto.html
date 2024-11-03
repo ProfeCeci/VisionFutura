@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Contacto</title>
-    <link rel="icon" href="images\favicon_io\cooltext469417617948014.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
-  </head>
-  <body>
-    <header>
-      <a href="index.html"
-        ><img src="images\cooltext469068630144422 (1).png" alt="Logo vision" class="logo"
-      /></a>
-      <a href="programas.html"> <i class="fa-solid fa-tv"></i>Programas</a>
 
-      <a href="noticias.html">
-        <i class="fa-solid fa-newspaper"></i>Noticias</a
-      >
-      <a href="sobre-nosotros.html"
-        ><i class="fa-solid fa-user"></i>Sobre Nosotros</a
-      >
-      <a href="contacto.html"
-        ><i class="fa-solid fa-square-envelope"></i>Contacto</a
-      >
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Contacto</title>
+  <link rel="icon" href="images\favicon_io\cooltext469417617948014.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
 
-    <center>
-      <h2><u>Formulario de contacto</u></h2>
-  
-      <form action="/submit" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required /><br /><br />
+<body>
+  <header>
+    <a href="index.html"><img src="images\cooltext469068630144422 (1).png" alt="Logo vision" class="logo" /></a>
+    <a href="programas.html"> <i class="fa-solid fa-tv"></i>Programas</a>
 
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo" required /><br /><br />
+    <a href="noticias.html"> <i class="fa-solid fa-newspaper"></i>Noticias</a>
+    <a href="sobre-nosotros.html"><i class="fa-solid fa-user"></i>Sobre Nosotros</a>
+    <a href="contacto.html"><i class="fa-solid fa-square-envelope"></i>Contacto</a>
+  </header>
 
-        <label for="Experiencia">Califique su nivel de experiencia:</label>
-        <select name="experiencia" id="Experiencia">
-          <option value="excelente">Excelente</option>
-          <option value="muy bueno">Muy bueno</option>
-          <option value="bueno">Bueno</option>
-          <option value="malo">Malo</option>
-          <option value="muy malo">Muy malo</option>
-        </select>
-        <br /><br />
-        <label for="comentario">Comentario:</label><br />
-        <textarea
-          id="comentario"
-          name="comentario"
-          rows="4"
-          cols="50"
-          required
-        ></textarea>
-        <br />
-        <!-- Submit Button  Enviar la info del formulario -->
+  <center>
+    <h2><u>Formulario de contacto</u></h2>
 
-        <button type="submit">Enviar</button>
+    <form action="/submit" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required /><br /><br />
 
-        <!-- Reset Button  limpiar el formulario-->
-        <button type="reset">Limpiar</button>
-      </form>
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required /><br /><br />
+
+      <label for="Experiencia">Califique su nivel de experiencia:</label>
+      <select name="experiencia" id="Experiencia">
+        <option value="excelente">Excelente</option>
+        <option value="muy bueno">Muy bueno</option>
+        <option value="bueno">Bueno</option>
+        <option value="malo">Malo</option>
+        <option value="muy malo">Muy malo</option>
+      </select>
       <br /><br />
-    </center>
+      <label for="comentario">Comentario:</label><br />
+      <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
+      <br />
+      <!-- Submit Button  Enviar la info del formulario -->
 
-    <footer>
-      <p class="footer">
-        &copy; 2024 Visión Futura. Todos los derechos reservados.
-      </p>
-    </footer>
+      <button type="submit">Enviar</button>
 
-  </body>
+      <!-- Reset Button  limpiar el formulario-->
+      <button type="reset">Limpiar</button>
+    </form>
+    <br /><br />
+  </center>
+
+  <footer>
+    <p class="footer">
+      &copy; 2024 Visión Futura. Todos los derechos reservados.
+    </p>
+  </footer>
+</body>
+
 </html>
