@@ -136,8 +136,6 @@ button:hover {
 .content {
     display: flex; /* Cambia a flex para que los hijos se distribuyan en fila */
     flex-direction: row; /* Asegura que los elementos estén en fila */
-    padding: 20px;
-    margin: 20px;
     column-gap: 40px; /* Añade un espacio horizontal de 40px entre los elementos */
 }
 h2 {
@@ -204,7 +202,7 @@ h2 {
     width: auto;       /* Ajusta el ancho como sea necesario */
     z-index: 100;      /* Asegura que la tabla esté por encima de otros elementos */
     padding: 20px;
-    margin-top: 120px; /* Espaciado superior */
+    margin-top: 170px; /* Espaciado superior */
 }
 .styled-table tr:nth-child(even) {
     background-color: #1E1E1E; /* Fondo oscuro para filas pares */
@@ -226,5 +224,24 @@ h2 {
     header a {
         width: auto; /* Hace que cada enlace ocupe solo el espacio necesario */
         text-align: center; /* Centra el texto dentro de cada enlace */
+    }
+    .content {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .table-container {
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+    .noticia1, .noticia3imaadi {
+        width: calc(100% - 20px); /* Hace que la imagen ocupe el 100% del ancho del contenedor menos el margen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+        margin: 0 10px; /* Mantiene el margen horizontal de 10px a los lados */
+    }
+    iframe {
+        width: calc(100% - 20px); /* Hace que el iframe ocupe el 100% del ancho del contenedor menos el margen */
+        height: 300px; /* Ajusta la altura del iframe según sea necesario */
+        margin: 0 10px; /* Agrega un margen horizontal de 10px a los lados */
     }
 }
