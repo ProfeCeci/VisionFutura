@@ -9,10 +9,6 @@
 body {
     background-color: #04050f;
     display: grid;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
     min-height: 100vh;
 }
 header {
@@ -26,18 +22,14 @@ header {
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
     justify-content: center; /* Centra los elementos horizontalmente */
     gap: 10px; /* Espacio entre los elementos */
-    grid-area: header;
 }
-main {
-    grid-area: main;
-}
+
 footer {
     background-color: #04050f;
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    grid-area: footer;
 }
 th{
     text-align: left;
@@ -170,38 +162,36 @@ header a:hover {
 }
 
 /* ====== MEDIA QUERIES ====== */
-/* Para tablets (>992px) */
-@media (min-width: 992px) {
-    .content {
-        display: grid;
-        grid-template-columns: 2fr 1fr; /* Ejemplo: contenido principal y barra lateral */
-        gap: 20px;
-    }
-    
+@media (max-width: 600px) {
     header {
-        padding: 15px 30px;
+        align-items: center; /* Centra los elementos horizontalmente */
+        gap: 20px; /* Espacio entre las filas */
     }
-    
-    /* Ajusta otros estilos según sea necesario */
-}
 
-/* Para pantallas 4K (>1200px) */
-@media (min-width: 1200px) {
-    body {
-        max-width: 1400px;
-        margin: 0 auto;
+    header a {
+        width: auto; /* Hace que cada enlace ocupe solo el espacio necesario */
+        text-align: center; /* Centra el texto dentro de cada enlace */
     }
-    
     .content {
-        grid-template-columns: 3fr 1fr; /* Ajusta la proporción para pantallas más grandes */
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .table-container {
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+    .noticia1, .noticia3imaadi {
+        width: calc(100% - 20px); /* Hace que la imagen ocupe el 100% del ancho del contenedor menos el margen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+        margin: 0 10px; /* Mantiene el margen horizontal de 10px a los lados */
+    }
+    iframe {
+        width: calc(100% - 20px); /* Hace que el iframe ocupe el 100% del ancho del contenedor menos el margen */
+        height: 300px; /* Ajusta la altura del iframe según sea necesario */
+        margin: 0 10px; /* Agrega un margen horizontal de 10px a los lados */
     }
     
-    /* Aumenta el tamaño de fuente para mejor legibilidad en pantallas grandes */
-    html {
-        font-size: 18px;
-    }
-    
-    /* Ajusta otros estilos según sea necesario */
 }
 
 /* ====== CONTENEDORES FLEXBOX Y GRID ====== */
@@ -248,11 +238,6 @@ a:hover {
 }
 
 
-.flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
-    color: #6989b5;
-    background-color: #04050f;
-}
-
 .table-container {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -287,35 +272,5 @@ a:hover {
     background-color: #2A2A2A; /* Fondo ligeramente más claro para filas impares */
 }
 
-@media (max-width: 600px) {
-    header {
-        align-items: center; /* Centra los elementos horizontalmente */
-        gap: 20px; /* Espacio entre las filas */
-    }
 
-    header a {
-        width: auto; /* Hace que cada enlace ocupe solo el espacio necesario */
-        text-align: center; /* Centra el texto dentro de cada enlace */
-    }
-    .content {
-        flex-direction: column; /* Cambia la dirección a columna */
-        align-items: center; /* Centra los elementos horizontalmente */
-    }
-
-    .table-container {
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    }
-    .noticia1, .noticia3imaadi {
-        width: calc(100% - 20px); /* Hace que la imagen ocupe el 100% del ancho del contenedor menos el margen */
-        height: auto; /* Mantiene la proporción de la imagen */
-        object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
-        margin: 0 10px; /* Mantiene el margen horizontal de 10px a los lados */
-    }
-    iframe {
-        width: calc(100% - 20px); /* Hace que el iframe ocupe el 100% del ancho del contenedor menos el margen */
-        height: 300px; /* Ajusta la altura del iframe según sea necesario */
-        margin: 0 10px; /* Agrega un margen horizontal de 10px a los lados */
-    }
-    
-}
 
