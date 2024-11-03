@@ -10,6 +10,10 @@ header {
     top: 0;
     padding: 20px;
     transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    display: flex; /* Usar flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos */
 }
 body {
     background-color: #04050f;
@@ -40,6 +44,10 @@ td{
     color: #AEDFF2;
     text-align: justify;
     line-height: 1.6;
+    padding: 5px 20px;
+}
+.content-wrapper {
+    margin-bottom: 60px; /* Ajusta este valor según la altura de tu footer */
 }
 .parrafo {
     color: #AEDFF2;
@@ -62,12 +70,18 @@ button{
     color: #020F59;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el color de fondo y transformaciones */
 }
-.footer{
-    color: #AEDFF2;
-    padding: 10px 0;
-    position: fixed; /* Fijo en la parte inferior */
+footer {
+    background-color: #04050f;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    text-align: center;
+}
+
+.footer {
+    color: #AEDFF2;
+    padding: 10px 0;
+    margin: 0;
 }
 h1{
     color:#AEDFF2;
@@ -82,6 +96,8 @@ header > a {
 header a {
     color: #AEDFF2;
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición para el color y la sombra del texto */
+    margin: 5px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 header a:hover {
     color: #FFD700; /* Cambia el color del texto al pasar el cursor */
@@ -118,8 +134,11 @@ button:hover {
 }
 
 .content {
+    display: flex; /* Cambia a flex para que los hijos se distribuyan en fila */
+    flex-direction: row; /* Asegura que los elementos estén en fila */
     padding: 20px;
     margin: 20px;
+    column-gap: 40px; /* Añade un espacio horizontal de 40px entre los elementos */
 }
 h2 {
     margin-bottom: 10px;
@@ -127,17 +146,26 @@ h2 {
 }
 .Subtitulo{
     border-bottom: 2px solid #AEDFF2;
+    text-align: center;
 }
 
 .flex-container {
-    display: flex;   /* Esta propiedad define al div como contenedor flex*/
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
     margin-bottom: 20px; /* Espaciado inferior */
 }
 .flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
     color: #6989b5;
     background-color: #04050f;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
 .styled-list {
@@ -150,12 +178,11 @@ h2 {
     max-width: 300px; /* Ancho máximo para evitar que se expandan demasiado */
 }
 .styled-table {
-    width: 100%;
     border-collapse: collapse; /* Colapsar bordes */
-    margin-top: 20px; /* Espaciado superior */
 }
 
 .styled-table caption {
+    text-align: center;
     margin-bottom: 10px; /* Espaciado inferior del caption */
 }
 
@@ -177,7 +204,7 @@ h2 {
     width: auto;       /* Ajusta el ancho como sea necesario */
     z-index: 100;      /* Asegura que la tabla esté por encima de otros elementos */
     padding: 20px;
-    margin: 20px;
+    margin-top: 120px; /* Espaciado superior */
 }
 .styled-table tr:nth-child(even) {
     background-color: #1E1E1E; /* Fondo oscuro para filas pares */
@@ -189,4 +216,15 @@ h2 {
 .styled-table caption::before {
     content: "📊 "; /* Agrega un icono de gráfico antes del título */
     font-size: 1.5em; /* Tamaño del icono */
+}
+@media (max-width: 600px) {
+    header {
+        align-items: center; /* Centra los elementos horizontalmente */
+        gap: 20px; /* Espacio entre las filas */
+    }
+
+    header a {
+        width: auto; /* Hace que cada enlace ocupe solo el espacio necesario */
+        text-align: center; /* Centra el texto dentro de cada enlace */
+    }
 }
