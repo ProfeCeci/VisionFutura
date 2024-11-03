@@ -4,6 +4,7 @@ Requisitos del trabajo práctico
 
 Diseño del sitio web “canal de televisión”
 Implementar:
+
 I. CSS utilizando CSS externo.
 
 II. Aplicar selectores básicos: universal, de tipo, de clase, por ID y avanzados
