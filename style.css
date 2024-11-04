@@ -14,6 +14,7 @@ header {
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
     justify-content: center; /* Centra los elementos horizontalmente */
     gap: 10px; /* Espacio entre los elementos */
+    z-index: 100;
 }
 body {
     background-color: #04050f;
@@ -132,6 +133,11 @@ button:hover {
     width: 70vw;
     height: 70vh;
 }
+.noticia3imaadi {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 10px; /* Agrega un margen horizontal de 10px a los lados */
+}
 
 .content {
     display: flex; /* Cambia a flex para que los hijos se distribuyan en fila */
@@ -226,7 +232,7 @@ h2 {
         text-align: center; /* Centra el texto dentro de cada enlace */
     }
     .content {
-        flex-direction: column; /* Cambia la dirección a columna */
+        flex-direction: column; /* CambiSa la dirección a columna */
         align-items: center; /* Centra los elementos horizontalmente */
     }
 
@@ -243,5 +249,45 @@ h2 {
         width: calc(100% - 20px); /* Hace que el iframe ocupe el 100% del ancho del contenedor menos el margen */
         height: 300px; /* Ajusta la altura del iframe según sea necesario */
         margin: 0 10px; /* Agrega un margen horizontal de 10px a los lados */
+    }
+}
+@media (min-width: 992px) {
+    .noticia3imaadi {
+        width: calc(100% - 20px); /* Hace que la imagen ocupe el 100% del ancho del contenedor menos el margen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+@media (min-width: 1200px) {
+    header {
+        padding: 30px; /* Aumenta el padding del encabezado */
+    }
+
+    .content {
+        column-gap: 60px; /* Aumenta el espacio entre columnas */
+    }
+
+    .noticia3imaadi {
+        width: 80%; /* Aumenta el ancho de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .flex-container > div {
+        margin: 10px; /* Agrega margen entre los elementos */
+    }
+
+    .styled-table {
+        font-size: 1.1em; /* Aumenta el tamaño de la fuente de la tabla */
+    }
+
+    .texto {
+        font-size: 1.1em; /* Aumenta el tamaño de la fuente del texto */
+    }
+
+    iframe {
+        height: 500px; /* Aumenta la altura del iframe */
+    }
+
+    .parrafo {
+        font-size: 1.2em; /* Aumenta el tamaño de la fuente del párrafo */
     }
 }
